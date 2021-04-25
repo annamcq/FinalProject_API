@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" con tent="width=device-width, initial-scale=1.0">
+    <title>Anna's API</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/> 
+    <style> #map {position: absolute; top: 5em; bottom: 5em; left: 4em; right: 4em;} </style>
+</head>
+
+<body>
+    <div id="mapid"></div>
+
+        <script> 
+        var map = L.map('map'). setView ([43.70639560832276, -79.38413969916203], 1);
+
+
+        var mapIcon = L.icon ({
+            iconURL: '512px-Map_marker.svg.png',
+            iconSize: [30, 50],
+            IconAnchor: [15,50],
+            popupAnchor: [-3,-7],
+
+        });
+
+        var redIcon = L.icon ( {
+            iconURL: 'red-map-marker.png'
+            iconSize: [30,50],
+            iconAnchor: [20,60],
+            popupAnchor: [-2.-8]
+        });
+
+        L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=FI5onZC9dFL5xXYPAjba', {
+            attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+            
+        }).addTo(map);
+        var marker = L.marker ( [43.70639560832276, -79.38413969916203]), {icon:MapIcon}  addTo (map); bindPopup ('Welcome to Toronto!'),
+        var marker = L.marker ([43.705389, - 79.3731286]), {icon:RedIcon} addTo (map); bindPopup ('Here is another marker!')
+
+       user.json 
+        {
+            "marker": "annashouse",
+            "size": "900sqft",
+            "colour": "blue",
+            "friend": [{
+                "marker": "bobshouse",
+                "size": "800sqft",
+                "colour": "green",
+                }]
+         }
+    
+       </script>
+
+<div class="grid">
+    <h1> Hello Everyone! </h1>
+    <h2> Welcome to a simple map API </h2>
+    <h3> By Anna </h3>
+</div>
+
+<div class="grid2">
+    <h4> See the map below</h3>
+</div>
+
+<div class="grid3">
+    <h4> You are here </h4>
+</div>
+
+   
+</body>
+</html>
+
